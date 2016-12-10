@@ -35,9 +35,9 @@
   </div>
 
   <!-- Preloader -->
-	<div id="preloader">
-		<div id="status"></div>
-	</div>
+  <div id="preloader">
+    <div id="status"></div>
+  </div>
 
   <!-- Home start -->
   <section id="home" class="home pfblock-image screen-height">
@@ -816,7 +816,7 @@
       var word = $(this).html();
       var idx = word.indexOf(' ');
       if(idx == -1) {
-          idx = word.length;
+        idx = word.length;
       }
       $(this).html('<span class="first-word">' + word.substring(0, idx) + '</span>' + word.substring(idx, word.length));
     });
@@ -864,16 +864,16 @@
 
     // Smooth Scrolling
     $('a[href*=#]:not([href=#])').click(function() {
-    	if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-    		var target = $(this.hash);
-    		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    		if (target.length) {
-    			$('html,body').animate({
-    				scrollTop: target.offset().top
-    			}, 1000);
-    			return true;
-    		}
-    	}
+      if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return true;
+        }
+      }
     });
   })();
   </script>
