@@ -804,70 +804,70 @@
     $(window).load(function() {
       $('#status').delay(1000).fadeOut('slow');
       $('#preloader').delay(2000).fadeOut('slow');
-    });
 
-    $('.first-word-emp-cards li').each(function() {
-      var word = $(this).html();
-      var idx = word.indexOf(' ');
-      if(idx == -1) {
-        idx = word.length;
-      }
-      $(this).html('<span class="first-word">' + word.substring(0, idx) + '</span>' + word.substring(idx, word.length));
-    });
-
-    // Home
-    $(".screen-height").height($(window).height());
-
-    // About
-    $('.first-layer').click(function() {
-      $('.first-layer').removeClass('flipInY');
-      $('.second-layer').removeClass('flipOutY');
-      $('.second-layer').removeClass('hidden');
-      $('.first-layer').addClass('animated flipOutY');
-      $('.second-layer').addClass('animated flipInY');
-    });
-    $('.second-layer').click(function() {
-      $('.first-layer').removeClass('flipOutY');
-      $('.second-layer').removeClass('flipInY');
-      $('.first-layer').addClass('flipInY');
-      $('.second-layer').addClass('flipOutY');
-    });
-
-    // Animation
-    wow = new WOW({
-      mobile: false
-    });
-    wow.init();
-
-    // Navigation
-    var nav_button, nav_ul;
-    nav_self = $('#cd-nav');
-    nav_button = $('#cd-nav a');
-    $(document).click(function() {
-      if (nav_self.hasClass('open')) {
-        nav_self.removeClass('open');
-      }
-    });
-    nav_button.click(function(e) {
-      if (!nav_self.hasClass('open')) {
-        nav_self.addClass('open');
-        e.stopPropagation();
-        return false;
-      }
-    });
-
-    // Smooth Scrolling
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return true;
+      $('.first-word-emp-cards li').each(function() {
+        var word = $(this).html();
+        var idx = word.indexOf(' ');
+        if(idx == -1) {
+          idx = word.length;
         }
-      }
+        $(this).html('<span class="first-word">' + word.substring(0, idx) + '</span>' + word.substring(idx, word.length));
+      });
+
+      // Home
+      $(".screen-height").height($(window).height());
+
+      // About
+      $('.first-layer').click(function() {
+        $('.first-layer').removeClass('flipInY');
+        $('.second-layer').removeClass('flipOutY');
+        $('.second-layer').removeClass('hidden');
+        $('.first-layer').addClass('animated flipOutY');
+        $('.second-layer').addClass('animated flipInY');
+      });
+      $('.second-layer').click(function() {
+        $('.first-layer').removeClass('flipOutY');
+        $('.second-layer').removeClass('flipInY');
+        $('.first-layer').addClass('flipInY');
+        $('.second-layer').addClass('flipOutY');
+      });
+
+      // Animation
+      wow = new WOW({
+        mobile: false
+      });
+      wow.init();
+
+      // Navigation
+      var nav_button, nav_ul;
+      nav_self = $('#cd-nav');
+      nav_button = $('#cd-nav a');
+      $(document).click(function() {
+        if (nav_self.hasClass('open')) {
+          nav_self.removeClass('open');
+        }
+      });
+      nav_button.click(function(e) {
+        if (!nav_self.hasClass('open')) {
+          nav_self.addClass('open');
+          e.stopPropagation();
+          return false;
+        }
+      });
+
+      // Smooth Scrolling
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return true;
+          }
+        }
+      });
     });
   })();
   </script>
